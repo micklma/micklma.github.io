@@ -1,3 +1,7 @@
+:root {
+  --primary-color: rosybrown;
+}
+
 .background-patter {
   position: fixed;
   z-index: -1;
@@ -9,4 +13,48 @@
   background-size: 100% 100%;
   background-repeat: no-repeat;
   background-image: url(./pictures/background.png);
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  font-family: Verdana, sans-serif;
+}
+
+.content__wrapper {
+  display: flex;
+  justify-content: center;
+  background: lavenderblush;
+}
+
+.content {
+  max-width: 800px;
+  width: 100%;
+  background: var(--primary-color);
+  border: none;
+  padding-top: 64px;
+}
+
+.nav {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  background: white;
+  display: flex;
+  padding: 12px;
+  box-sizing: border-box;
+  justify-content: center;
+  gap: 24px;
+}
+
+.nav__item {
+  text-decoration: none;
+  font-size: 120%;
+  color: var(--primary-color);
+  font-weight: 500;
+}
+
+.nav__item:hover {
+  text-decoration: underline;
 }
