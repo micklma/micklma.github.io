@@ -21,6 +21,14 @@ body {
   font-family: Verdana, sans-serif;
 }
 
+section {
+  padding: 0 12px;
+}
+
+#contact {
+  padding: 0;
+}
+
 .content__wrapper {
   display: flex;
   justify-content: center;
@@ -57,4 +65,8 @@ body {
 
 .nav__item:hover {
   text-decoration: underline;
+}
+
+.contact__content {
+  padding: 0 12px;
 }
