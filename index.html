@@ -30,25 +30,38 @@
     </nav>
     <section id="intro" style="margin-top: -100px">
       <p>
-        Ein entspanntes Nähwochenende mit Freunden ist genau das, was du brauchst, um dem Alltagsstress zu
-        entfliehen und dich auf kreative Weise zu entspannen. Stell dir vor, du verbringst ein Wochenende mit
-        deinen besten Freundinnen, um gemeinsam zu nähen, zu plaudern und einfach nur zu entspannen.
+        Ein entspanntes Nähwochenende mit Freund:innen ist genau das, was du brauchst, um dem Alltagsstress zu
+        entfliehen und dich auf kreative Weise zu entspannen? Stell dir vor, du verbringst ein Wochenende mit
+        deinen besten Freund:innen, um gemeinsam zu nähen, zu plaudern und einfach nur zu entspannen.
       </p>
       <p>
         In einer gemütlichen Umgebung könnt ihr eure Nähmaschinen auspacken und an euren Projekten arbeiten,
         während ihr euch von inspirierenden Gesprächen und leckeren Snacks verwöhnen lasst. Ihr könnt Ideen und
         Techniken austauschen, euch gegenseitig helfen und gemeinsam eure Kreativität ausleben.
       </p>
+      <p>
+        Neben der Näharbeit könnt ihr gemeinsame Ausflüge machen, euren Körper und Geist beruhigen und die Zeit 
+        gemeinsam genießen. Das Tempo für den Tag bestimmt ihr allein.
+      </p>
     </section>
     <section>
       <a class="anchor" id="offer"></a>
       <h2>Das bieten wir dir</h2>
-      <ul>
-        <li></li>
+      <ul style="margin: 0; margin-bottom: 2.5em;">
+        <li>Wochenende (Freitag-Sonntag, Check-in ab 15 Uhr, Check-out bis 18 Uhr) mit Freunden</li>
+        <li>Übernachtung im Einzel- oder Doppelzimmer</li>
+        <li>Frühstück, Mittagessen, Abendessen nach Wahl</li>
+        <li>gemeinsame Näharbeitszeit mit Freund:innen</li>
+        <li>gemeinsame Yogaeinheit (Optional)</li>
+        <li>gemeinsamer Ausflug in den Stoffladen (optional)</li>
       </ul>
-      <h2>Das gibt es</h2>
-      <ul>
-        <li></li>
+      <h2>Das liegt zum Nähen bereit</h2>
+      <ul style="margin: 0; margin-bottom: 2.5em;">
+        <li>Arbeitstische</li>
+        <li>Auswahl an Schnittmustern</li>
+        <li>W6 Wertarbeit Nähmaschine 1235/61</li>
+        <li>Klammern und Heftnadeln</li>
+        <li>Fachliteratur</li>
       </ul>
       <a class="button" style="margin: auto" href="#booking">jetzt buchen</a>
     </section>
@@ -59,20 +72,24 @@
       <div class="packlist">
         <p>
           <input type="checkbox" id="point1">
-          <label for="point1">Nähmaschine</label>
+          <label for="point1">Nähmaschine/n</label>
         </p>
         <p>
           <input type="checkbox" id="point2">
-          <label for="point1">Nähmaschine</label>
+          <label for="point1">deine benötigten Schnittmuster</label>
         </p>
         <p>
           <input type="checkbox" id="point3">
-          <label for="point1">Nähmaschine</label>
+          <label for="point1">Stoffe und Zuschnitte</label>
         </p>
         <p>
           <input type="checkbox" id="point4">
-          <label for="point1">Nähmaschine</label>
+          <label for="point1">Garn</label>
         </p>
+        <p>
+            <input type="checkbox" id="point4">
+            <label for="point1">sonstiges Material zum Nähen</label>
+          </p>
       </div>
     </section>
     <section>
@@ -83,19 +100,23 @@
         <div class="booking__dates">
           <div>
             <input class="booking__input booking__input--hidden" id="first-date" type="radio" name="dates" required>
-            <label class="booking__label" for="first-date">xx.xx.xxxx</label>
+            <label class="booking__label" for="first-date">15.-17.09.2023</label>
           </div>
           <div>
             <input class="booking__input booking__input--hidden" id="second-date" type="radio" name="dates">
-            <label class="booking__label" for="second-date">xx.xx.xxxx</label>
+            <label class="booking__label" for="second-date">06.-08.10.2023</label>
           </div>
           <div>
             <input class="booking__input booking__input--hidden" id="third-date" type="radio" name="dates">
-            <label class="booking__label" for="third-date">xx.xx.xxxx</label>
+            <label class="booking__label" for="third-date">20.-22.10.2023</label>
           </div>
           <div>
             <input class="booking__input booking__input--hidden" id="fourth-date" type="radio" name="dates">
-            <label class="booking__label" for="fourth-date">xx.xx.xxxx</label>
+            <label class="booking__label" for="fourth-date">03.-05.11.2023</label>
+          </div>
+          <div>
+            <input class="booking__input booking__input--hidden" id="fourth-date" type="radio" name="dates">
+            <label class="booking__label" for="fourth-date">24.-26.11.2023</label>
           </div>
         </div>
         <h3>Schlafplatz</h3>
@@ -113,12 +134,16 @@
           <h3>Zusatzoptionen <span style="font-size: 50%; color: #555">(mehrere möglich)</span></h3>
           <div class="booking__extra">
             <div>
-              <input class="booking__input booking__input--hidden" id="breakfast" type="checkbox" name="additions">
-              <label class="booking__label" for="breakfast">Frühstück</label>
+              <input class="booking__input booking__input--hidden" id="lunch" type="checkbox" name="additions">
+              <label class="booking__label" for="lunch">Stoffladentour</label>
             </div>
             <div>
               <input class="booking__input booking__input--hidden" id="lunch" type="checkbox" name="additions">
-              <label class="booking__label" for="lunch">Mittagessen</label>
+              <label class="booking__label" for="lunch">Yogaeinheit</label>
+            </div>
+            <div>
+              <input class="booking__input booking__input--hidden" id="lunch" type="checkbox" name="additions">
+              <label class="booking__label" for="lunch">Barbesuch</label>
             </div>
           </div>
         </div>
@@ -142,8 +167,8 @@
         <h2>Kontakt & Anfahrt</h2>
         <p>
           Nähfreunde<br/>
-          Musterstraße 1<br/>
-          12345 Musterstadt<br/>
+          Kraetkestraße 17<br/>
+          10315 Berlin<br/>
         </p>
       </div>
       <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d345.7053511774645!2d13.508168108158387!3d52.504782533762516!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47a84f9be99833f1%3A0xaaec2704a64b9d60!2sKraetkestra%C3%9Fe%2017%2C%2010315%20Berlin!5e0!3m2!1sen!2sde!4v1683656178754!5m2!1sen!2sde"
