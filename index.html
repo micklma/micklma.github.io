@@ -75,11 +75,11 @@
     </section>
     <section id="booking" style="top: 250px">
       <h2>Buchung</h2>
-      <form style="display: flex; flex-flow: column">
+      <form style="display: flex; flex-flow: column" action="" method="post" id="booking-form" onsubmit="sendInformation(); return false">
         <h3>Zeit</h3>
         <div class="booking__dates">
           <div>
-            <input class="booking__input booking__input--hidden" id="first-date" type="radio" name="dates">
+            <input class="booking__input booking__input--hidden" id="first-date" type="radio" name="dates" required>
             <label class="booking__label" for="first-date">xx.xx.xxxx</label>
           </div>
           <div>
@@ -98,7 +98,7 @@
         <h3>Schlafplatz</h3>
         <div class="booking__rooms">
           <div>
-            <input class="booking__input booking__input--hidden" id="single-bed" type="radio" name="beds">
+            <input class="booking__input booking__input--hidden" id="single-bed" type="radio" name="beds" required>
             <label class="booking__label" for="single-bed">Einzelbett</label>
           </div>
           <div>
@@ -107,7 +107,7 @@
           </div>
         </div>
         <div>
-          <h3>Zusatzoptionen</h3>
+          <h3>Zusatzoptionen <span style="font-size: 50%; color: #555">(mehrere möglich)</span></h3>
           <div class="booking__extra">
             <div>
               <input class="booking__input booking__input--hidden" id="breakfast" type="checkbox" name="additions">
@@ -123,11 +123,11 @@
         <div style="margin-bottom: 1em">
           <p>
             <label for="name">Name</label>
-            <input class="booking__input" id="name" type="text" name="name">
+            <input class="booking__input" id="name" type="text" name="name" required>
           </p>
           <p>
             <label for="email">E-Mail</label>
-            <input class="booking__input" id="email" type="email" name="email">
+            <input class="booking__input" id="email" type="email" name="email" required>
           </p>
         </div>
         <input type="submit" class="button" value="Buchen" style="margin: auto">
@@ -148,5 +148,41 @@
     </section>
   </div>
 </div>
+<script>
+  const bookingForm = document.getElementById('booking-form');
+
+  function sendInformation() {
+    const submit = document.querySelector('input[type="submit"]')
+    submit.disabled = true
+    submit.value = "Buchung wurde gesendet"
+    const formData = new FormData(bookingForm);
+    const datesGroup = bookingForm.querySelector('.booking__dates')
+    const datesInput = datesGroup.querySelector('.booking__input:checked')
+    const date = datesGroup.querySelector(`[for="${datesInput.id}"]`).innerText
+
+    const roomsGroup = bookingForm.querySelector('.booking__rooms')
+    const roomsInput = roomsGroup.querySelector('.booking__input:checked')
+    const room = roomsGroup.querySelector(`[for="${roomsInput.id}"]`).innerText
+
+    const extraGroup = bookingForm.querySelector('.booking__extra')
+    const extraInput = extraGroup.querySelectorAll('.booking__input:checked')
+
+    const extra = []
+
+    for (let i = 0; i < extraInput.length; i++) {
+      extra.push(extraGroup.querySelector(`[for="${extraInput[i].id}"]`).innerText)
+    }
+
+    const content = (
+            `Hallo ich möchte gerne die Nähreise für den ${date} buchen. %0D%0A%0D%0A` +
+            `Ich nehme ein ${room}. %0D%0A%0D%0A` +
+            `Zusatzoptionen: ${extra.join(', ')}. %0D%0A%0D%0A %0D%0A%0D%0A` +
+            `Meine Kontaktdaten %0D%0A%0D%0A` +
+            `Email: ${formData.get("email")} %0D%0A%0D%0A` +
+            `Name: ${formData.get("name")}`)
+
+    window.open(`mailto:mai.micklisch@gmail.com?subject=Nähfreunde&body=${content}`);
+  }
+</script>
 </body>
 </html>
