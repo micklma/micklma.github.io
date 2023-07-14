@@ -35,6 +35,25 @@ p {
   margin-top: 0;
 }
 
+ul {
+  margin-block-start: 0;
+  padding-inline-start: 1.2em;
+}
+
+@media (max-width: 600px) {
+  h1 {
+    font-size: 250%;
+  }
+
+  h2 {
+    font-size: 140%;
+  }
+
+  h3 {
+    font-size: 120%;
+  }
+}
+
 body {
   padding: 0;
   margin: 0;
@@ -48,10 +67,6 @@ section {
   display: flex;
   flex-direction: column;
   border: medium dotted var(--primary-color);
-}
-
-#contact {
-  padding: 0;
 }
 
 .content__wrapper {
@@ -69,6 +84,12 @@ section {
   width: 100%;
   gap: 24px;
   padding-top: 24px;
+}
+
+@media (max-width: 600px) {
+  .content {
+    padding: 0 8px;
+  }
 }
 
 .button {
@@ -115,6 +136,12 @@ section {
   font-weight: 500;
 }
 
+@media (max-width: 600px) {
+  .nav__item {
+    font-size: 90%;
+  }
+}
+
 .nav__item:hover {
   text-decoration: underline;
 }
@@ -137,6 +164,10 @@ section {
   height: 100%;
   z-index: 10;
   color: white;
+}
+
+.header__subtitle {
+  text-align: center;
 }
 
 .header__image {
@@ -170,6 +201,12 @@ section {
   margin-left: 5px;
 }
 
+@media (max-width: 600px) {
+  .booking__label {
+    margin-left: 1em;
+  }
+}
+
 .booking__input:checked + .booking__label {
   background: var(--primary-intense);
   color: white;
@@ -181,6 +218,14 @@ section {
   padding: 8px;
   margin-left: 1em;
   width: 30em;
+}
+
+@media (max-width: 600px) {
+  .booking__input {
+    width: calc(100% - 2em);
+    margin-left: 0;
+    margin-top: 0.4em;
+  }
 }
 
 .booking__input--hidden {
